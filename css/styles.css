@@ -92,16 +92,15 @@ p{margin:0}
 .nav-toggle span{width:26px;height:3px;background:var(--brown-700);border-radius:3px;transition:.25s}
 
 /* ---------- Hero ---------- */
-.hero{position:relative;min-height:min(88vh,720px);display:flex;align-items:center;overflow:hidden}
-.hero__bg{position:absolute;inset:0;background:url("../assets/img/portada.jpg") center/cover no-repeat;transform:scale(1.02)}
-.hero__overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,16,8,.20) 0%,rgba(28,16,8,0) 45%)}
-.hero__content{position:relative;color:var(--cream-100);max-width:var(--container);width:100%;padding-block:64px;display:flex;align-items:center;justify-content:flex-end;gap:44px}
+.hero{position:relative;overflow:hidden;background:var(--brown-900)}
+.hero__img{display:block;width:100%;height:auto}
+.hero__content{position:absolute;inset:0;color:var(--cream-100);display:flex;align-items:center;justify-content:flex-end;pointer-events:none}
 .hero__eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.78rem;font-weight:600;color:var(--gold-300);margin-bottom:16px}
 .hero__title{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800;color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.35)}
 .hero__title .script{display:block;font-size:clamp(3rem,9vw,5.6rem);color:var(--gold-400);font-weight:400;line-height:.9;margin-top:.05em}
 .hero__lead{font-size:clamp(1.05rem,2.4vw,1.35rem);margin-top:22px;max-width:30ch;color:var(--cream-200)}
 .hero__lead em{color:var(--gold-300);font-style:italic}
-.hero__actions{display:flex;flex-direction:column;gap:14px;flex:0 0 auto;min-width:210px}
+.hero__actions{display:flex;flex-direction:column;gap:14px;flex:0 0 auto;min-width:210px;pointer-events:auto}
 .hero__actions .btn{width:100%;box-shadow:0 10px 26px rgba(0,0,0,.34)}
 .hero__tag{margin-top:26px;font-family:var(--font-script);font-size:1.6rem;color:var(--gold-300)}
 
@@ -243,8 +242,7 @@ p{margin:0}
   .contact__cards{grid-template-columns:1fr}
 }
 @media (max-width:600px){
-  .hero{align-items:flex-end}
-  .hero__content{justify-content:center;padding-block:0 32px}
+  .hero__content{position:static;justify-content:center;padding-block:16px}
   .hero__actions{flex-direction:row;flex-wrap:wrap;min-width:0;width:100%}
   .hero__actions .btn{width:auto;flex:1 1 160px}
 }
